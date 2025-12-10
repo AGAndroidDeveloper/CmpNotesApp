@@ -33,6 +33,9 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.koin.android)
+//            // For Compose on Android
+            implementation(libs.koin.compose)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -45,10 +48,20 @@ kotlin {
             implementation(libs.androidx.lifecycle.runtimeCompose)
             implementation(libs.androidx.room.runtime)
             implementation(libs.androidx.sqlite.bundled)
+//            implementation(libs.material.icon.extended)
+            implementation(compose.materialIconsExtended)
+           // implementation("org.jetbrains.compose.material:material-icons-extended:1.7.3")
+            implementation(libs.koin.core)
+            implementation(libs.koin.compose.viewmodel)
+            implementation(libs.koin.compose)
+
+//            implementation(libs.coil.compose)
+//            implementation(libs.coil.network.ktor)
 
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
+            implementation(libs.koin.test)
         }
     }
 }
